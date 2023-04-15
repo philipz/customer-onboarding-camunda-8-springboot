@@ -12,8 +12,8 @@
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<spring.boot.version>3.0.1</spring.boot.version>
-		<zeebe.version>8.1.17</zeebe.version>
+		<spring.boot.version>3.0.5</spring.boot.version>
+		<zeebe.version>8.2.0</zeebe.version>
 	</properties>
 
 	<dependencies>
@@ -71,7 +71,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M8</version>
+				<version>3.0.0</version>
 			</plugin>
 			<plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -80,6 +80,10 @@
     				  <mainClass>io.berndruecker.onboarding.customer.CustomerOnboardingSpringbootApplication</mainClass>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
+			</plugin>
 		</plugins>		
 	</build>
 
